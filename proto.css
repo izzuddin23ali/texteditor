@@ -1,0 +1,149 @@
+body{
+  padding: 0;margin: 0;
+  background-color: lightgrey;
+}
+
+p{
+  font-size: 16px;
+}
+
+#head1{
+  background-color: #541B54;
+  color: white;
+}
+
+#head2{
+  background-color: #2E1A47;
+  overflow-x: scroll;
+}
+
+#head2::-webkit-scrollbar{
+  display: none;
+}
+
+#textArea{
+  height: 75vh;
+  overflow-y: scroll;
+  display: block;
+  background-color: white;
+}
+
+#textArea::-webkit-scrollbar{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+#textArea::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+  box-shadow: 25px;
+}
+
+#textArea::-webkit-scrollbar-thumb
+{
+  background-color: #000000;
+  border: 2px solid #555555;
+}
+
+#main{
+  height: 90vh;
+}
+
+button{
+  border: 0;
+  background-color: lightgrey;
+  margin: 0px 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color: grey;
+}
+
+button.active{
+  background-color:darkgrey;
+}
+
+select{
+  width: 200px;
+  margin: 0px 5px;
+  height: 40px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  padding-left: 1px;
+}
+
+input[type="color"]{
+  width: 200px;
+  margin: 0px 5px;
+  height: 40px;
+  vertical-align: baseline;
+  border-radius: 5px;
+}
+
+p{
+  word-break: break-all;
+}
+
+/*radio button*/
+
+.tool {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tool input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: lightgrey;
+  padding-left: 10px;
+  padding-top: 3px;
+  border-radius: 5px;
+}
+
+.tool:hover input ~ .checkmark {
+  background-color: grey;
+}
+
+.tool input:checked ~ .checkmark {
+  background-color: darkgrey;
+}
+
+.checkmark:after {
+  position: absolute;
+  display: none;
+  background-color: darkgrey;
+}
+
+.tool input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.tool .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
